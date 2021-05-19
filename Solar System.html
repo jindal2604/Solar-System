@@ -28,15 +28,52 @@
       font-size:30px;
       }
       
+ @keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+  0% {
+    /* Smaller blur radius */
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #0fa,
+      0 0 45px #0fa,
+      0 0 55px #0fa,
+      0 0 70px #0fa,
+      0 0 80px #0fa;
+  }
+}
+    
       #cred
       {
-        left:-100px;
+        left:750px;
+        color: #fff;
+        text-shadow:
+          0 0 13px #fff,
+          0 0 18px #fff,
+          
+          0 0 81px #0fa,
+          0 0 91px #0fa,
+          0 0 101px #0fa,
+          0 0 150px #0fa;
+          
+          animation: pulsate 1.5s infinite alternate;
       }
 
 
      button{
      background-image:url("https://library.kissclipart.com/20180921/atw/kissclipart-cool-pictures-of-the-milky-way-clipart-milky-way-g-d7f35ba5e15688be.png");
-        
         background-repeat:space;
         background-position:absolute;
         background-attachment:fixed;
@@ -214,7 +251,7 @@
   border-radius:100%;
   left:200px;
   top:200px;
-  animation:solar 80s linear infinite;
+  animation:solar 76s linear infinite;
 }
 #mars:after
 {  
@@ -233,7 +270,7 @@
   border-radius:100%;
   left:225px;
   top:225px;
-  animation:solar 76s linear infinite;  
+  animation:solar 69s linear infinite;  
 }
 #earth:after
 {  content:url('https://i1.wp.com/freepngimages.com/wp-content/uploads/2015/09/planet-earth-from-space1.png?w=23');
@@ -303,6 +340,27 @@
 } 
  from{transform:revolute(0deg);}
  to{transform:revolute(360deg);}
+}
+
+@keyframes flicker {
+  
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
 }</style></head> 
  <body> 
   <div id="solarsystem"> 
@@ -372,6 +430,7 @@
   <button style="color:white" type="button" onclick="alert('Mercury is the smallest and innermost planet in the Solar System. Its orbit around the Sun takes 87.97 days, the shortest of all the planets in the Solar System. It is named after the Roman deity Mercury, the messenger of the gods.')">Mercury</button> 
   <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
   <button style="color:white" type="button" onclick="alert('The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process.[20] It is by far the most important source of energy for life on Earth. Its diameter is about 1.39 million kilometers (864,000 miles), or 109 times that of Earth, and its mass is about 330,000 times that of Earth.')">Sun</button> 
+  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
   <br> 
   <br> 
   <br> 
@@ -447,9 +506,9 @@
    </tbody> 
   </table> 
   <p style="color:white">This is the list/table of the number of <br>planets and there dwarfs</p> 
-  <h3 style="color:white">Fun Fact?</h3> 
+  <h3 style="color:white">Fun Fact!</h3> 
   <p style="color:white">There are nearly 200 moons <br>in our solar system</p> 
-  <h4 style="color:white"> Know More?</h4> 
+  <h4 style="color:white"> Know More!</h4> 
   <p style="color:white">The Galaxy in which these all planets, <br> their moon, dwarfs, sun and astroid lives <br>is known as Milky Way Galaxy. </p> 
   <h3 style="color:white">Wierd wow! </h3> 
   <p style="color:white">Did you knew that our Universe lies<br> in a gaint black hole.</p> 
@@ -470,13 +529,13 @@
      <td>1.</td> 
      <td>0 </td> 
      <td>Mercury</td> 
-     <td>X</td> 
+     <td>N/A</td> 
     </tr> 
     <tr> 
      <td>2.</td> 
      <td>0</td> 
      <td>Venus</td> 
-     <td>X</td> 
+     <td>N/A</td> 
     </tr> 
     <tr> 
      <td>3.</td> 
@@ -520,7 +579,7 @@
   <br> 
   <br> 
   <hr style="color:green"> 
-  <p id="cred" style="color:gray"> Powered by <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mayank Jindal</p> 
+  <p id="cred" style="color:white"> Powered by <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mayank Jindal</p> 
   <h5 style="color:green" ;font-size:31px;> V1.16.9</h5> 
  
 <script type="text/javascript" id="dcoder_script">//New features coming soon
@@ -529,7 +588,7 @@
                 //To give a background music 0% ✓
                 //Add moons 0% ✓
                 //more facts-100% ✓
-alert('Welcome to the Solar System')
+                  alert('Welcome to the Solar System')
 alert('At the right of the screen there are some info buttons')
 alert('Hope you enjoy')
 function onReady(callback) {
@@ -549,4 +608,5 @@ onReady(function() {
   setVisible('.page', true);
   setVisible('#loading', false);
 });
- </script></body></html>
+
+//Location access</script></body></html>
